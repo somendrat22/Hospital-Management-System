@@ -4,11 +4,11 @@ import Model.Interfaces.Doctor;
 
 public class OfflineDoctors implements Doctor {
 
-   private String docId;
-   private String docName;
-   private String docDegree;
-   private String docSpeciality;
-   private int docAge;
+    public String docId;
+    public String docName;
+    public String docDegree;
+    public String docSpeciality;
+    public int docAge;
 
     OfflineDoctors(String docId, String docName, String docDegree, String docSpeciality, int docAge){
         this.docId = docId;
@@ -32,5 +32,9 @@ public class OfflineDoctors implements Doctor {
         System.out.println("My doc degree is " + docDegree );
         System.out.println("My speiality is " + docSpeciality);
         System.out.println("My afe is " + docAge);
+    }
+
+    public String docId(){
+        return docId;
     }
 }
