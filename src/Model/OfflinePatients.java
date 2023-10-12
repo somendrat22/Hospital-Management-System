@@ -1,5 +1,7 @@
 package Model;
 
+import Database.DoctorDB;
+import Database.PatientDB;
 import Model.Interfaces.Patient;
 
 public class OfflinePatients implements Patient {
@@ -9,17 +11,27 @@ public class OfflinePatients implements Patient {
     String patientIllness;
     String patientGender;
 
+    int patientAge;
+
     int bedNumber;
 
 
 
-    public OfflinePatients(String pId, String patientName, String patientIllness, String patientGender, int bedNumber) {
+    public OfflinePatients(String pId, String patientName, String patientIllness,int patientAge,  String patientGender, int bedNumber) {
         this.pId = pId;
         this.patientName = patientName;
         this.patientIllness = patientIllness;
         this.patientGender = patientGender;
         this.bedNumber = bedNumber;
+        this.patientAge = patientAge;
+
     }
+
+
+    public String getPatientName(){
+        return patientName;
+    }
+
 
 
     public void getMyDetails(){
@@ -36,7 +48,5 @@ public class OfflinePatients implements Patient {
         System.out.println(bedNumber);
     }
 
-    public void assignMeDoctor(){
 
-    }
 }
