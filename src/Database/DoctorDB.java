@@ -10,6 +10,7 @@ import java.util.HashMap;
 public class DoctorDB {
 
 
+    // HSP2 -> OfflineDOc
     HashMap<String, Doctor>  docDetails;
     HashMap<String, ArrayList<Patient>> docVsPatients;
     public DoctorDB(){
@@ -17,6 +18,11 @@ public class DoctorDB {
         docVsPatients = new HashMap<>();
     }
 
+    // HSP2
+
+    public Doctor getDoctorByID(String docID){
+        return docDetails.get(docID);
+    }
     public int getTotalDocs(){
         return docDetails.size();
     }

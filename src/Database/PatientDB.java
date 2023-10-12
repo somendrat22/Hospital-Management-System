@@ -11,6 +11,15 @@ public class PatientDB {
         patientDetails = new HashMap<>();
     }
 
+    public int getTotalPatient(){
+        return patientDetails.size();
+    }
+
+
+    public Patient getPatientById(String pid){
+        return patientDetails.get(pid);
+    }
+
     public Patient getPatient(String pid){
         return patientDetails.get(pid);
     }

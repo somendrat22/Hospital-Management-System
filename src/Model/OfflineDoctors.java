@@ -19,6 +19,10 @@ public class OfflineDoctors implements Doctor {
     }
 
 
+
+    public String getDoctorName(){
+        return docName;
+    }
     public void diagnosis(){
         System.out.println("Doing diagnosis offline");
     }
